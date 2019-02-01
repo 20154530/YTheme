@@ -3,9 +3,60 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\include.php = ..\Y_Theta\include.php
+		..\Y_Theta\main.php = ..\Y_Theta\main.php
+		..\Y_Theta\screenshot.png = ..\Y_Theta\screenshot.png
+		..\Y_Theta\theme.xml = ..\Y_Theta\theme.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{206FEDDA-ECC4-4795-9266-743CB30ADF71}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\include\index.html = ..\Y_Theta\include\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "script", "script", "{CAA60379-0311-4C23-A247-17DDBB3DE310}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\script\custom.js = ..\Y_Theta\script\custom.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{C0A6627B-117C-46AB-8D96-F471370C5253}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\source\colpick.css = ..\Y_Theta\source\colpick.css
+		..\Y_Theta\source\colpick.js = ..\Y_Theta\source\colpick.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "style", "style", "{0188EF1B-DBF5-4544-B3D4-0E538E8DB31C}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\style\default.css = ..\Y_Theta\style\default.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{67136F3B-66D6-4D06-91DF-EA283EF36821}"
+	ProjectSection(SolutionItems) = preProject
+		..\Y_Theta\template\comment.php = ..\Y_Theta\template\comment.php
+		..\Y_Theta\template\commentpost.php = ..\Y_Theta\template\commentpost.php
+		..\Y_Theta\template\comments.php = ..\Y_Theta\template\comments.php
+		..\Y_Theta\template\footer.php = ..\Y_Theta\template\footer.php
+		..\Y_Theta\template\header.php = ..\Y_Theta\template\header.php
+		..\Y_Theta\template\index.php = ..\Y_Theta\template\index.php
+		..\Y_Theta\template\post-istop.php = ..\Y_Theta\template\post-istop.php
+		..\Y_Theta\template\post-multi.php = ..\Y_Theta\template\post-multi.php
+		..\Y_Theta\template\post-page.php = ..\Y_Theta\template\post-page.php
+		..\Y_Theta\template\post-single.php = ..\Y_Theta\template\post-single.php
+		..\Y_Theta\template\single.php = ..\Y_Theta\template\single.php
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{206FEDDA-ECC4-4795-9266-743CB30ADF71} = {17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}
+		{CAA60379-0311-4C23-A247-17DDBB3DE310} = {17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}
+		{C0A6627B-117C-46AB-8D96-F471370C5253} = {17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}
+		{0188EF1B-DBF5-4544-B3D4-0E538E8DB31C} = {17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}
+		{67136F3B-66D6-4D06-91DF-EA283EF36821} = {17D41E02-6CFE-4DA0-8961-E1A54DA9BF16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B8E3068-6E72-4508-9A0E-9711FED996CC}
