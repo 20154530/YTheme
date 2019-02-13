@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin version="php">
-	<id>yt_console</id>
-	<name>后台配色</name>
-	<url>http://y-theta.com</url>
-	<note>Y Theta</note>
-	<description>Test Console color config</description>
-	<path>main.php</path>
-	<include>include.php</include>
-	<level>1</level>
-	<author>
-		<name>Y_Theta</name>
-		<email>2483507105@qq.com</email>
-		<url>http://y-theta.com</url>
-	</author>
-	<source>
-		<name></name>
-		<email></email>
-		<url></url>
-	</source>
-	<adapted>151626</adapted>
-	<version>1.0</version>
-	<pubdate>2019-02-2</pubdate>
-	<modified>2019-02-2</modified>
-	<price>0</price>
-	<phpver>5.2</phpver>
-	<advanced>
-		<dependency></dependency>
-		<rewritefunctions></rewritefunctions>
-		<existsfunctions></existsfunctions>
-		<conflict></conflict>
-	</advanced>
-	<sidebars>
-		<sidebar1></sidebar1>
-		<sidebar2></sidebar2>
-	</sidebars>
+  <id>yt_console</id>
+  <name>后台配色</name>
+  <url>http://y-theta.com</url>
+  <note>Y Theta</note>
+  <description>Test Console color config</description>
+  <path>main.php</path>
+  <include>include.php</include>
+  <level>1</level>
+  <author>
+    <name>Y_Theta</name>
+    <email>2483507105@qq.com</email>
+    <url>http://y-theta.com</url>
+  </author>
+  <source>
+    <name></name>
+    <email></email>
+    <url></url>
+  </source>
+  <adapted>151626</adapted>
+  <version>1.0</version>
+  <pubdate>2019-02-2</pubdate>
+  <modified>2019-02-2</modified>
+  <price>0</price>
+  <phpver>5.2</phpver>
+  <advanced>
+    <dependency></dependency>
+    <rewritefunctions></rewritefunctions>
+    <existsfunctions></existsfunctions>
+    <conflict></conflict>
+  </advanced>
+  <sidebars>
+    <sidebar1></sidebar1>
+    <sidebar2></sidebar2>
+  </sidebars>
 </plugin>
