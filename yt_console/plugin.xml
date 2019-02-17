@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin version="php">
   <id>yt_console</id>
-  <name>后台配色</name>
+  <name>yt_console</name>
   <url>http://y-theta.com</url>
   <note>Y Theta</note>
   <description>Test Console color config</description>
