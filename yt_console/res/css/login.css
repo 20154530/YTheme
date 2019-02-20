@@ -17,35 +17,57 @@
   height: 100%;
   position: absolute;
   background-color: #FFF;
-  background-image: url(res/img/BG_2.jpg);
-  -moz-background-size: cover;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  background-size: cover;
   left: 0px;
   top: 0px;
+  padding: 0px;
 }
 
 .bg #wrapper {
-  width: 360px;
-  height: 320px;
-  background: rgba(255, 255, 255, 0.95);
   position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  /* box-shadow: 0px 12px 12px -6px rgba(0, 0, 0, .25) inset; */
+  padding: 0px;
   margin: 0px;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-160px) translateX(-180px);
+  float: left;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+}
+
+.bg .logo {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin: 0%;
+}
+
+#frameholder {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .bg .login {
-  width: 100%;
-  height: 100%;
-  padding: 24px 32px;
   position: relative;
+  width: 360px;
+  height: 100%;
+  /* border-right: 1px solid #007acc; */
+  box-shadow: 10px 0px 12px -12px rgba(0, 0, 0, .75);
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bg .login form {
+  position: relative;
+  padding: 12px 0px 24px 0px;
   height: 100%;
+  width: 320px;
+  left: 50%;
+  transform: translateX(-160px);
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -67,12 +89,6 @@
 .bg .login dd {
   margin: 0px;
   padding: 0px;
-}
-
-.bg .logo {
-  width: 100%px;
-  height: auto;
-  margin: 0%;
 }
 
 .bg dd.username, .bg dd.password {
@@ -171,11 +187,13 @@
   height: 16px;
   border-radius: 50% 50%;
   margin: 4px 0px;
-  background: #ccc;
+  border: 1px solid #ccc;
+  background: #fff;
 }
 
 .bg .checkbox #rem_Toogle:hover label#chkStyle_Thumb {
   background: #007acc;
+  border: 1px solid transparent;
 }
 
 .bg .checkbox label#chkStyle_Track {
@@ -184,7 +202,7 @@
   width: 32px;
   height: 2px;
   margin: 11px 8px;
-  background: #646464;
+  background: #727272;
 }
 
 .bg input[type='checkbox']:checked+label {
@@ -199,6 +217,7 @@
   -webkit-transform: translateX(32px);
   transform: translateX(32px);
   background: #007acc;
+  border: 1px solid transparent;
 }
 
 /* Submit */
@@ -209,21 +228,30 @@
 }
 
 .bg input#btnPost {
-  width: 72px;
-  line-height: 30px;
+  width: 64px;
+  padding: 0px 4px 0px 0px;
+  height: 28px;
+  line-height: 24px;
   letter-spacing: 8px;
+  font-size: 16px;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
   text-align: right;
   border: none;
   background: none;
   color: #007acc;
 }
 
+.bg input#btnPost:active, .bg input#btnPost:visited, .bg input#btnPost:enabled {
+  outline: none;
+}
+
 .bg input#btnPost.buttonEntered {
-  color: #0094f7;
-  -webkit-transform: scale(1.2 1.2);
-  transform: scale(1.2 1.2);
+  color: #fff;
+  background-color: #007acc;
 }
 
 .bg input#btnPost.buttonEntered.buttonPressed {
-  color: #004b7c;
+  color: #fff;
+  background-color: #00558d;
 }

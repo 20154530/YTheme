@@ -5,7 +5,7 @@ $(function () {//DOM
   $('.password').addClass('form_group_label');
   $('.bg .checkbox>label').removeAttr('for');
 
-  //
+  //add custome checkbox 
   var toogle = document.createElement('div');
   toogle.setAttribute("id", "rem_Toogle");
   var checktrack = document.createElement('label');
@@ -16,6 +16,10 @@ $(function () {//DOM
   checkthumb.setAttribute("id", "chkStyle_Thumb");
   toogle.append(checktrack, checkthumb);
   $('.checkbox').append(toogle);
+
+  //add custome title
+
+  //add script
 
   $('.bg input#btnPost').mouseenter(function () {
     $(this).addClass("buttonEntered");
