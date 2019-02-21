@@ -17,10 +17,23 @@ $(function () {//DOM
   toogle.append(checktrack, checkthumb);
   $('.checkbox').append(toogle);
 
-  //add custome title
+  //add logo
+  var loginlogo = document.createElement('dl');
+  loginlogo.id = 'loginlogo';
+  $('div.login>form').prepend(loginlogo);
+
+  //add right side
+  var frameholder = document.createElement('div');
+  frameholder.id = 'frameholder';
+  $('.bg .logo').prepend(frameholder);
 
   //add script
+  // var ani_1 = document.createElement('script');
+  // ani_1.type = 'text/javascript';
+  // ani_1.src = 'index.js';
+  // document.body.prepend(ani_1);
 
+  //按钮动画
   $('.bg input#btnPost').mouseenter(function () {
     $(this).addClass("buttonEntered");
   }).mousedown(function () {
@@ -32,7 +45,7 @@ $(function () {//DOM
     $(this).removeClass("buttonPressed");
   });
 }),
-  +function (a) {
+  +function (a) {//输入框动画
     'use strict';
     a.fn.floatingLabel = function (b) {
       var c = this.closest('.form_group_label');
@@ -53,7 +66,7 @@ $(function () {//DOM
       return this
     }
   }(jQuery),
-  +function () {
+  +function () {//输入框绑定
     'use strict';
     $('.form_group_label').each(function () {
       $(this).floatingLabel('change')
