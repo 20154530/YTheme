@@ -27,12 +27,6 @@ $(function () {//DOM
   frameholder.id = 'frameholder';
   $('.bg .logo').prepend(frameholder);
 
-  //add script
-  // var ani_1 = document.createElement('script');
-  // ani_1.type = 'text/javascript';
-  // ani_1.src = 'index.js';
-  // document.body.prepend(ani_1);
-
   //按钮动画
   $('.bg input#btnPost').mouseenter(function () {
     $(this).addClass("buttonEntered");
@@ -45,6 +39,7 @@ $(function () {//DOM
     $(this).removeClass("buttonPressed");
   });
 }),
+
   +function (a) {//输入框动画
     'use strict';
     a.fn.floatingLabel = function (b) {
@@ -80,4 +75,18 @@ $(function () {//DOM
       $(document).on('focusout', '.form_group_label', function () {
         $(this).floatingLabel('focusout')
       })
-  }();
+  }(),
+  $(function () {//开启看板娘
+    var baseurl = "http://" + document.domain + "/zb_users/plugin/yt_console";
+    $.ajax({ url: baseurl + '/res/templetes/live2d.xml', dataType: "text", type: "GET", cache: true, async: false, success: function (xml) { $('body').prepend($(xml)[0]);} });
+    $.ajax({ url: baseurl + '/res/js/live2d/jquery-ui.min.js', dataType: "script", cache: true, async: false });
+    $.ajax({ url: baseurl + '/res/js/live2d/waifu-tips-ex.js', dataType: "script", cache: true, async: false });
+    $.ajax({ url: baseurl + '/res/js/live2d/live2d.min.js', dataType: "script", cache: true, async: false });
+
+    live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 84;
+    live2d_settings['modelStorage'] = false;
+    /* 在 initModel 前添加 */
+    initModel(baseurl + '/res/json/waifu-tips.json');
+  });

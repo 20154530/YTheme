@@ -2,12 +2,6 @@
 * 登录界面
 */
 
-@font-face {
-  font-family: 'Segoe';
-  src: url('./res/font/segmdl2.woff') format('woff');
-  src: url('./res/font/Segoe.ttf') format('truetype');
-}
-
 .logo img {
   display: none;
 }
@@ -17,6 +11,8 @@
   height: 100%;
   position: absolute;
   background-color: #FFF;
+  background-image: url(../img/2233_1.jpg);
+  
   left: 0px;
   top: 0px;
   padding: 0px;
@@ -28,7 +24,7 @@
   height: 100%;
   background: rgb(255, 255, 255);
   /* box-shadow: 0px 12px 12px -6px rgba(0, 0, 0, .25) inset; */
-  padding: 0px;
+  padding: 24px 0 0 0;
   margin: 0px;
   float: left;
   display: flex;

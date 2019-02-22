@@ -13,6 +13,7 @@ function yt_console_Css()
   global $zbp, $lang;
   
   echo '<link rel="stylesheet" type="text/css" href="' . $zbp->host . 'zb_users/plugin/yt_console/res/css/login.css"/>' . "\r\n";
+  echo '<link rel="stylesheet" type="text/css" href="' . $zbp->host . 'zb_users/plugin/yt_console/res/css/waifu.css"/>' . "\r\n";
   echo '<script src="' . $zbp->host . 'zb_users/plugin/yt_console/res/js/login.js"></script>' . "\r\n";
   $to = "2483507105@qq.com"; 
   $subject = "Test"; 

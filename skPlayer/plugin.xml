@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin version="php">
+<id>skPlayer</id>
+<name>HTML5音乐播放器skPlayer</name>
+<url>http://www.yiwuku.com/a/19935.html</url>
+<note>网站背景音乐神器，支持自动获取网易云音乐歌单</note>
+<description>skPlayer是一款好看又简洁的HTML5网页音乐播放器，同时支持自定义歌单和网易云音乐歌单。</description>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>尔今</name>
+  <email>erx@qq.com</email>
+  <url>http://www.yiwuku.com/</url>
+</author>
+<source>
+  <name></name>
+  <email></email>
+  <url></url>
+</source>
+<adapted>151603</adapted>
+<version>1.1</version>
+<pubdate>2018-01-15</pubdate>
+<modified>2018-01-25</modified>
+<price>0</price>
+<advanced>
+  <dependency></dependency>
+  <rewritefunctions></rewritefunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</plugin>
