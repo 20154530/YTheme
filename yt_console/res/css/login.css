@@ -1,6 +1,10 @@
-/*
-* 登录界面
-*/
+@font-face {
+  font-family: 'Questrial';
+  src: url('../font/Questrial/Questrial-Regular.ttf') format('truetype');
+  src: url('../font/Questrial/Questrial-Regular.svg') format('svg'), url('../font/Questrial/Questrial.eot') format('embedded-opentype'), url('../font/Questrial/Questrial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .logo img {
   display: none;
@@ -10,52 +14,63 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #FFF;
-  background-image: url(../img/2233_1.jpg);
-  
+  background: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
   left: 0px;
   top: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
 .bg #wrapper {
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255);
   /* box-shadow: 0px 12px 12px -6px rgba(0, 0, 0, .25) inset; */
-  padding: 24px 0 0 0;
   margin: 0px;
   float: left;
   display: flex;
   display: -webkit-flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
 }
 
 .bg .logo {
   position: relative;
-  flex: 1;
-  height: 100%;
   margin: 0%;
+  background-color: hsla(245, 28%, 41%, .8);
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, .75);
+  height: 24px;
+  bottom: 0px;
+  width: 100%;
+  float: left;
 }
 
 .bg .login {
   position: relative;
-  width: 360px;
-  height: 100%;
+  margin: 0%;
+  width: 320px;
+  flex: 1;
   /* border-right: 1px solid #007acc; */
-  box-shadow: 10px 0px 12px -12px rgba(0, 0, 0, .75);
+  float: right;
   display: flex;
   display: -webkit-flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-self: flex-end;
 }
 
 .bg .login form {
   position: relative;
-  padding: 12px 12px 24px 12px;
+  padding: 96px 20px 96px 20px;
   height: 100%;
   width: 100%;
+  transform: translateX(-24px);
+  background: rgba(255, 255, 255, .45);
+  box-shadow: 0px -2px 12px 0px rgba(0, 0, 0, .25);
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -65,6 +80,14 @@
 .bg .login dl {
   height: auto;
   overflow: hidden;
+}
+
+.bg .login>form>dl:first-childï¼šafter {
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  background: inherit;
 }
 
 .bg .login dl+dl+dl {
@@ -82,31 +105,31 @@
 
 .bg dd.username, .bg dd.password {
   width: 100%;
-  margin: 12px 0px 0px 0px;
-  padding: 0%;
+  margin: 8px 0px;
+  padding: 0px;
 }
 
 .bg dd label, #rem_Toogle label, .bg input#btnPost {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  transition-duration: .3s;
-  -webkit-transition-property: color, -webkit-transform;
-  transition-property: color, -webkit-transform;
-  transition-property: color, transform;
-  transition-property: color, transform, -webkit-transform;
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+  transition-duration: .224s;
+  -webkit-transition-property: color, background-color, border, -webkit-transform;
+  transition-property: color, background-color, border, -webkit-transform;
+  transition-property: color, background-color, border, transform;
+  transition-property: color, background-color, border, transform, -webkit-transform;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
 .bg dd.form_group_label label {
-  color: rgba(0, 0, 0, .40);
+  color: #1e1e1e;
   cursor: text;
   width: auto;
   font-size: 18px;
   line-height: 1;
   padding: 2px 0px;
   text-align: left;
-  top: 28px;
-  left: 0;
+  top: 26px;
+  left: 8px;
   z-index: 1;
   position: relative;
 }
@@ -114,25 +137,32 @@
 .bg dd.form_group_label input {
   width: 100%;
   line-height: 36px;
-  border-bottom: 1px solid rgba(0, 122, 224, 255);
   background: none;
+  border-left: 2px solid rgba(0, 0, 0, 128);
+  margin: 0px 0px 0px 2px;
   font-size: 14px;
   font-family: "Microsoft YaHei", Verdana, sans-serif;
-  padding: 2px 0px;
   color: #7e7e7e;
 }
 
 .bg dd.form_group_label.control_highlight label, .bg dd.form_group_label.control_focus label {
-  -webkit-transform: scale(.8, .8) translateY(-28px);
-  transform: scale(.8, .8) translateY(-28px);
+  -webkit-transform: scale(.8, .8) translate(-10px, -32px);
+  transform: scale(.8, .8) translate(-10px, -32px);
 }
 
 .bg dd.form_group_label.control_focus label {
-  color: #007acc;
+  color: hsla(245, 28%, 41%, 1);
+}
+
+.bg dd.form_group_label.control_highlight input {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.24);
 }
 
 .bg dd.form_group_label.control_focus input {
-  border-bottom: 2px solid rgba(0, 122, 224, 255);
+  color: #fff;
+  background: hsla(245, 28%, 41%, .45);
+  border-left: 2px solid hsla(245, 28%, 41%, 1);
 }
 
 .bg input#edtUserName:focus, .bg input#edtPassWord:focus {
@@ -158,55 +188,62 @@
   display: none;
 }
 
+.login input[type="checkbox"]+label {
+  padding: 0px 0px 0px 4px;
+}
+
 #rem_Toogle {
-  width: 48px;
+  width: 40px;
+  position: relative;
 }
 
 .bg .checkbox label {
   padding: 0px;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(0, 0, 0, .40)
+  color: #323232;
+}
+
+.bg .checkbox input+label {
+  margin: 0px 0px 0px 4px;
+  /*    border-left:2px solid  rgba(0, 0, 0, 128); */
 }
 
 .bg .checkbox label#chkStyle_Thumb {
   position: absolute;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
-  border-radius: 50% 50%;
-  margin: 4px 0px;
-  border: 1px solid #ccc;
+  width: 14px;
+  height: 14px;
+  margin: 5px 5px;
   background: #fff;
-}
-
-.bg .checkbox #rem_Toogle:hover label#chkStyle_Thumb {
-  background: #007acc;
-  border: 1px solid transparent;
 }
 
 .bg .checkbox label#chkStyle_Track {
   position: absolute;
   cursor: pointer;
-  width: 32px;
-  height: 2px;
-  margin: 11px 8px;
-  background: #727272;
+  width: 36px;
+  height: 16px;
+  margin: 4px 0px 4px 4px;
+  background: none;
+  border: 1px solid #a0a0a0;
 }
 
 .bg input[type='checkbox']:checked+label {
-  color: #007acc;
+  margin: 0px 0px 0px 2px;
+  color: hsla(245, 28%, 41%, 1);
+  border-left: 2px solid hsla(245, 28%, 41%, 1);
 }
 
 .bg input[type='checkbox']:checked+label+div label#chkStyle_Track {
-  background: #0099ff;
+  background: hsla(245, 28%, 64%, 1);
+  border: 1px solid hsla(245, 28%, 64%, 1);
 }
 
 .bg input[type='checkbox']:checked+label+div label#chkStyle_Thumb {
-  -webkit-transform: translateX(32px);
-  transform: translateX(32px);
-  background: #007acc;
-  border: 1px solid transparent;
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  background: #fff;
+  border: 0px;
 }
 
 /* Submit */
@@ -218,17 +255,18 @@
 
 .bg input#btnPost {
   width: 64px;
-  padding: 0px 4px 0px 0px;
+  padding: 0px 0px 0px 8px;
   height: 28px;
   line-height: 24px;
   letter-spacing: 8px;
   font-size: 16px;
   -webkit-transform-origin: center center;
   transform-origin: center center;
-  text-align: right;
+  text-align: center;
   border: none;
   background: none;
-  color: #007acc;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
 }
 
 .bg input#btnPost:active, .bg input#btnPost:visited, .bg input#btnPost:enabled {
@@ -236,24 +274,101 @@
 }
 
 .bg input#btnPost.buttonEntered {
-  color: #fff;
-  background-color: #007acc;
+  background-color: hsla(245, 28%, 41%, 1);
 }
 
 .bg input#btnPost.buttonEntered.buttonPressed {
   color: #fff;
-  background-color: #00558d;
+  background-color: hsla(245, 28%, 28%, 1);
 }
 
 /* Added */
 
-#frameholder {
-  width: 100%;
-  height: 100%;
-  border: none;
+dl#dl_title {
+  font-family: 'Questrial';
+  color: hsla(245, 28%, 41%, .8);
+  font-size: 48px;
+  line-height: 48px;
+  height: 48px;
+  letter-spacing: 30px;
+  margin: 0px 0px 12px 18px;
 }
 
-dl#loginlogo {
-  height: 64px;
-  margin: 4px 0px;
+div#imginfo {
+  position: absolute;
+  width: auto;
+  right: 4px;
+  top: 8%;
+  height: 84%;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+div#imginfo label {
+  position: relative;
+  line-height: 18px;
+  color: #efefef;
+  font-size: 12px;
+  margin: 0px 8px;
+  text-align: center;
+}
+
+div#imginfo:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/*
+media query
+*/
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .bg #wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bg .login {
+    flex: initial;
+    height: auto;
+    width: 100%;
+  }
+  .bg .login form {
+    transform: none;
+    padding: 32px 16px;
+    background: rgba(255, 255, 255, .75);
+  }
+  .bg .login dd.submit {
+    margin: 24px 0px 0px 0px;
+  }
+  .bg input#btnPost {
+    width: 100%;
+  }
+  dl#dl_title {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .bg #wrapper {
+    float: right;
+    width: 240px;
+  }
+  .bg .login {
+    flex: 1;
+    height: auto;
+    width: 100%;
+  }
+  .bg .login form {
+    transform: none;
+    padding: 32px 16px;
+    background: rgba(255, 255, 255, .75);
+  }
+  .bg .login dd.submit {
+    margin: 12px 0px 0px 0px;
+  }
+  .bg input#btnPost {
+    width: 100%;
+  }
+  dl#dl_title {
+    display: none;
+  }
 }

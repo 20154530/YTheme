@@ -1,3 +1,4 @@
+var baseurl = "http://" + document.domain + "/zb_users/plugin/yt_console";
 $(function () {//DOM
   'use strict';
   $('dl dt').remove();
@@ -6,28 +7,13 @@ $(function () {//DOM
   $('.bg .checkbox>label').removeAttr('for');
 
   //add custome checkbox 
-  var toogle = document.createElement('div');
-  toogle.setAttribute("id", "rem_Toogle");
-  var checktrack = document.createElement('label');
-  checktrack.setAttribute("for", "chkRemember");
-  checktrack.setAttribute("id", "chkStyle_Track");
-  var checkthumb = document.createElement('label');
-  checkthumb.setAttribute("for", "chkRemember");
-  checkthumb.setAttribute("id", "chkStyle_Thumb");
-  toogle.append(checktrack, checkthumb);
-  $('.checkbox').append(toogle);
-
+  $('.checkbox').append('<div id="rem_Toogle"><label for="chkRemember" id="chkStyle_Track"></label><label for="chkRemember" id="chkStyle_Thumb"></label></div>');
   //add logo
-  var loginlogo = document.createElement('dl');
-  loginlogo.id = 'loginlogo';
-  $('div.login>form').prepend(loginlogo);
+  $('.bg div.logo').prepend('<div id="imginfo"><label></label></div>');
+  //add 
+  $('.bg .login form').prepend('<dl id="dl_title">Login</dl>');
 
-  //add right side
-  var frameholder = document.createElement('div');
-  frameholder.id = 'frameholder';
-  $('.bg .logo').prepend(frameholder);
-
-  //按钮动画
+  //input state
   $('.bg input#btnPost').mouseenter(function () {
     $(this).addClass("buttonEntered");
   }).mousedown(function () {
@@ -38,8 +24,9 @@ $(function () {//DOM
     $(this).removeClass("buttonEntered");
     $(this).removeClass("buttonPressed");
   });
-}),
 
+  //bg state
+}),
   +function (a) {//输入框动画
     'use strict';
     a.fn.floatingLabel = function (b) {
@@ -76,17 +63,32 @@ $(function () {//DOM
         $(this).floatingLabel('focusout')
       })
   }(),
+  +function () {//状态检查
+    'use strict';
+    $.ajax({
+      url: baseurl + '/query.php', dataType: "text", type: "GET", data: { data: 'loginbg' }, cache: false, async: true,
+      success: function (txt) {
+        let imginfo = txt.split(',');
+        $('.bg').css('background-image', 'url(' + imginfo[0] + ')');
+        $('div#imginfo label').html(imginfo[1]);
+        $('div#imginfo').click(function () {
+          window.open(imginfo[0], '_blank').location;
+        });
+      }
+    });
+  }(),
   $(function () {//开启看板娘
-    var baseurl = "http://" + document.domain + "/zb_users/plugin/yt_console";
-    $.ajax({ url: baseurl + '/res/templetes/live2d.xml', dataType: "text", type: "GET", cache: true, async: false, success: function (xml) { $('body').prepend($(xml)[0]);} });
-    $.ajax({ url: baseurl + '/res/js/live2d/jquery-ui.min.js', dataType: "script", cache: true, async: false });
-    $.ajax({ url: baseurl + '/res/js/live2d/waifu-tips-ex.js', dataType: "script", cache: true, async: false });
-    $.ajax({ url: baseurl + '/res/js/live2d/live2d.min.js', dataType: "script", cache: true, async: false });
+    'use strict';
+    // var baseurl = "http://" + document.domain + "/zb_users/plugin/yt_console";
+    // $.ajax({ url: baseurl + '/res/templetes/live2d.xml', dataType: "text", type: "GET", cache: true, async: false, success: function (xml) { $('body').prepend($(xml)[0]); } });
+    // $.ajax({ url: baseurl + '/res/js/live2d/jquery-ui.min.js', dataType: "script", cache: true, async: false });
+    // $.ajax({ url: baseurl + '/res/js/live2d/waifu-tips-ex.js', dataType: "script", cache: true, async: false });
+    // $.ajax({ url: baseurl + '/res/js/live2d/live2d.min.js', dataType: "script", cache: true, async: false });
 
-    live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
-    live2d_settings['modelId'] = 1;
-    live2d_settings['modelTexturesId'] = 84;
-    live2d_settings['modelStorage'] = false;
-    /* 在 initModel 前添加 */
-    initModel(baseurl + '/res/json/waifu-tips.json');
+    // live2d_settings['hitokotoAPI'] = 'hitokoto.cn';
+    // live2d_settings['modelId'] = 1;
+    // live2d_settings['modelTexturesId'] = 84;
+    // live2d_settings['modelStorage'] = false;
+    // /* 在 initModel 前添加 */
+    // initModel(baseurl + '/res/json/waifu-tips.json');
   });

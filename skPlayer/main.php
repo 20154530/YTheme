@@ -27,6 +27,7 @@ if(isset($_POST['Items'])){
     <a href="http://www.yiwuku.com/diy-zblog.html" target="_blank"><span class="m-left">定制服务</span></a>
     <a href="http://www.yiwuku.com/" target="_blank"><span class="m-right">作者网站</span></a>
   </div>
+  
   <div id="divMain2">
 <style type="text/css">
 .xtips{color:#999;margin-left:15px}

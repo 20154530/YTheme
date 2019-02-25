@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin version="php">
-  <id>yt_console</id>
-  <name>yt_console</name>
-  <url>http://y-theta.com</url>
-  <note>Y Theta</note>
-  <description>Test Console color config</description>
+<theme version="php">
+  <id>yt_blog</id>
+  <name>PJAX主题</name>
+  <url>http://www.y-theta.com</url>
+  <note>PJAX 移动设备适应</note>
+  <description>自己博客用的主题</description>
   <path>main.php</path>
   <include>include.php</include>
   <level>1</level>
   <author>
     <name>Y_Theta</name>
     <email>2483507105@qq.com</email>
-    <url>http://y-theta.com</url>
+    <url>http://www.y-theta.com</url>
   </author>
   <source>
     <name></name>
     <email></email>
     <url></url>
   </source>
-  <adapted>151626</adapted>
+  <adapted>1.5.2.1935</adapted>
   <version>1.0</version>
-  <pubdate>2019-02-2</pubdate>
-  <modified>2019-02-2</modified>
+  <pubdate>2019-02-10</pubdate>
+  <modified>2019-02-24</modified>
   <price>0</price>
-  <phpver>7.2</phpver>
+  <phpver>5.2</phpver>
   <advanced>
     <dependency></dependency>
     <rewritefunctions></rewritefunctions>
@@ -33,5 +33,8 @@
   <sidebars>
     <sidebar1></sidebar1>
     <sidebar2></sidebar2>
+    <sidebar3></sidebar3>
+    <sidebar4></sidebar4>
+    <sidebar5></sidebar5>
   </sidebars>
-</plugin>
+</theme>
