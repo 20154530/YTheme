@@ -1,26 +1,27 @@
-{* Template Name:所有评论模板 *}
+<input type="hidden" id="post_id" value="{$article.ID}">
 {if $socialcomment}
-{$socialcomment}
+	{$socialcomment}
 {else}
-
-{if $article.CommNums>0}
-<div class="cmBox t">
-  <ul class="msg msghead">
-    <li class="tbname">{$lang['yt_blog']['comment_list']}:</li>
-  </ul>
-</div>
-{/if}
-<label id="AjaxCommentBegin"></label>
-<!--评论输出-->
-{if $article.CommNums>0}
-<div class="cmBox">
- {foreach $comments as $key => $comment}
-  {template:comment}
- {/foreach} 
-</div>
-{/if}
-<!--评论翻页条输出-->
-<div class="pagebar commentpagebar"> {template:pagebar} </div>
-<label id="AjaxCommentEnd"></label>
-{template:commentpost}
+	<div class="post_content post-comment-list" id="post-comment-list">
+		<div id="comments" class="responsesWrapper">
+			{if $article.CommNums==0}
+				<h3 class="comments-title">本文 <span class="commentCount">暂无</span> 评论</h3>
+			{else}
+				<h3 class="comments-title">共有 <span class="commentCount">{$article.CommNums}</span> 条评论</h3>
+			{/if}
+			<label id="AjaxCommentBegin"></label>
+			<div id="comment_list" >
+			<ol class="commentlist" >
+				{foreach $comments as $key => $comment}
+					{template:comment}
+				{/foreach}
+				</ol>
+			</div>
+			<nav id="comments_paginate" class="navigation comment-navigation u-textAlignCenter">
+				{template:comments-pagebar}
+			</nav>
+			<label id="AjaxCommentEnd"></label>
+			{template:commentpost}
+		</div>
+	</div>
 {/if}

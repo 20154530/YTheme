@@ -1,33 +1,32 @@
 {* Template Name:404错误页 *}
-<?php
- echo'<meta charset="UTF-8"><div style="text-align:center;padding:80px 0;font-size:16px;"><h2 style="font-size:60px;margin-bottom:32px;">傻逼不要扒皮</h2>由于您未授权的访问触发了防御机制，你的行为已经被列为侵略行为！！</div>';
- die();
- ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="Cache-Control" content="no-transform"/>
-	<meta http-equiv="Content-Language" content="{$language}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>对不起，页面未找到</title>
-    <link rel="stylesheet" rev="stylesheet" href="{$host}zb_users/theme/{$theme}/style/images/404.css" type="text/css" media="all"/>
-    <style>
-	.page-back,submit{background-color: #{$zbp->Config('txpbl')->zs};}
-	</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="viewport" content="width=device-width,initial-scale=1.33,minimum-scale=1.0,maximum-scale=1.0">
+  <title>404 - 对不起，您查找的页面不存在！</title>
 </head>
+
 <body>
-<div class="wrapper-page">
-    <div class="page-ex">
-        <h1>404!</h1>
-        <h2>对不起，页面未找到</h2><br>
-        <form name="search" method="post" action="{$host}zb_system/cmd.php?act=search">
-		    <input type="text" name="q" size="11" placeholder="找不到内容？尝试下我们的搜索吧!"> 
-			<input type="submit" value="搜索">
-		</form>
-        <br>
-        <a class="page-back" href="{$host}"><i class="fa fa-angle-left"></i> 返回首页</a>
+  <div id="main">
+    <header id="header">
+      <h1><span class="icon">!</span>404<span class="sub">not found</span></h1>
+    </header>
+    <div id="content">
+      <h2>您打开的这个的页面不存在！</h2>
+      <p>当您看到这个页面，表示您的访问出错，这个错误是您打开的页面不存在，请确认您输入的地址是正确的，如果是在本站点击后出现这个页面，请联系站长进行处理，或者请通过下边的搜索重新查找资源，{$name}感谢您的支持!</p>
+      <div class="buttons">
+        <span><a class="button" href="#" onClick="history.go(-1);return true;">返回上页</a></span>
+        <span><a class="button" href="{$host}">返回首页</a></span>
+      </div>
+      <div class="clear"></div>
     </div>
-</div>
+  </div>
 </body>
+
 </html>

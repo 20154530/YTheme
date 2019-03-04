@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin version="php">
-  <id>yt_console</id>
-  <name>yt_console</name>
+  <id>yt_live2d</id>
+  <name>yt_live2d</name>
   <url>http://www.y-theta.com</url>
   <note>Y Theta</note>
-  <description>Test Console color config</description>
+  <description>Live2d wife test</description>
   <path>main.php</path>
   <include>include.php</include>
   <level>1</level>
   <author>
     <name>Y_Theta</name>
     <email>2483507105@qq.com</email>
-  <url>http://www.y-theta.com</url>
+    <url>http://www.y-theta.com</url>
   </author>
   <source>
     <name></name>

@@ -1,36 +1,38 @@
-{* Template Name:列表页普通文章 *}
-{php}
-$intro=preg_replace("/<(.*?)>/","",$article->Content); 
-$intro=str_replace("&nbsp;"," ",$intro); 
-$intro=trim(SubStrUTF8($intro,135)).'...'
-{/php}
-
-<div class="post">
-    <div class="post-head">
-        <h1 class="post-title"><a href="{$article.Url}" title="{$article.Title}">{$article.Title}</a></h1>
-        <div class="post-meta">
-            <span class="author"><em>{$lang['msg']['author']}:{$article.Author.StaticName}</em><em>{$article.Time('Y年m月d日')}</em><em>{$lang['yt_blog']['view']}:{$article.ViewNums}</em></span>
-        </div>
-    </div>
-{php}
-    $randimg=mt_rand(1,4);
-    $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg|\.png]))[\'|\"].*?[\/]?>/";
-    $content = $article->Content;
-    preg_match_all($pattern,$content,$matchContent);
-    if(isset($matchContent[1][0]))
-        $randimg=$matchContent[1][0];
-    else
-        $randimg=$zbp->host."zb_users/theme/ymbk/style/img/$randimg.jpg";
-{/php}
-    <div class="post-media">
-        <a href="{$article.Url}" title="{$article.Title}">
-            <img src="{$randimg}" />
-        </a>
-    </div>
-    <div class="post-content">
-       <p>{$intro}</p>
-    </div>
-    <div class="post-link">
-        <a href="{$article.Url}" class="btn btn1">阅读全文</a>
-    </div>
+{php}IMAGE::getPics($article,300,150,4);{/php}
+<div class="article">
+	<div class="articleHeader">
+		<h1 class="articleTitle"><a href="{$article.Url}">{$article.Title}</a></h1>
+	</div>
+	<div class="articleBody clearfix">
+		<div class="articleThumb">
+			{if $article->IMAGE_COUNT>0}
+				<a href="{$article.Url}"><img src="{$article.IMAGE[0]}" alt="{$article.Title}" class="wp-post-image" width="400" height="200"  /></a>
+			{else}
+				<a href="{$article.Url}"><img src="{$zbp->Config('yt_blog')->thumbnail}" alt="{$article.Title}" class="wp-post-image" width="400" height="200"  /></a>
+			{/if}
+		</div>
+		<div class="articleFeed">
+			{php}$description = trim(SubStrUTF8(TransferHTML($article->Content,'[nohtml]'),128)).'...';{/php}
+			<p>{$description}</p>
+		</div>
+		<div class="articleTags">
+			<ul>
+				{if $article.Tags}
+					{foreach $article.Tags as $tag}
+						<a href="{$tag.Url}" rel="tag">{$tag.Name}</a>
+					{/foreach}
+				{else}
+					<a href="javascript:;" rel="tag">本文暂时没有添加标签</a>
+				{/if}
+			</ul>
+		</div>
+	</div>
+	<div class="articleFooter clearfix">
+		<ul class="articleStatu">
+			<li><i class="fa fa-calendar"></i>{$article.Time('Y-m-d')}</li>
+			<li><i class="fa fa-eye"></i>{$article.ViewNums}次浏览</li>
+			<li><i class="fa fa-folder-o"></i><a href="{$article.Category.Url}" rel="category tag">{$article.Category.Name}</a></li>
+		</ul>
+		<a href="{$article.Url}" class="btn btn-readmore btn-info btn-md">阅读更多</a>
+	</div>
 </div>

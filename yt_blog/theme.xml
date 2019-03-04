@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <theme version="php">
-  <id>yt_blog</id>
-  <name>PJAX主题</name>
+<id>yt_blog</id>
+<name>yt_blog</name>
+<url>http://www.y-theta.com</url>
+<note>自适应 </note>
+<description>yt_blog test</description>
+<path></path>
+<include></include>
+<level>1</level>
+<author>
+  <name>Y_Theta</name>
+  <email>2483507105@qq.com</email>
   <url>http://www.y-theta.com</url>
-  <note>PJAX 移动设备适应</note>
-  <description>自己博客用的主题</description>
-  <path>main.php</path>
-  <include>include.php</include>
-  <level>1</level>
-  <author>
-    <name>Y_Theta</name>
-    <email>2483507105@qq.com</email>
-    <url>http://www.y-theta.com</url>
-  </author>
-  <source>
-    <name></name>
-    <email></email>
-    <url></url>
-  </source>
-  <adapted>1.5.2.1935</adapted>
-  <version>1.0</version>
-  <pubdate>2019-02-10</pubdate>
-  <modified>2019-02-24</modified>
-  <price>0</price>
-  <phpver>5.2</phpver>
-  <advanced>
-    <dependency></dependency>
-    <rewritefunctions></rewritefunctions>
-    <existsfunctions></existsfunctions>
-    <conflict></conflict>
-  </advanced>
-  <sidebars>
-    <sidebar1></sidebar1>
-    <sidebar2></sidebar2>
-    <sidebar3></sidebar3>
-    <sidebar4></sidebar4>
-    <sidebar5></sidebar5>
-  </sidebars>
+</author>
+<source>
+  <name></name>
+  <email></email>
+  <url></url>
+</source>
+<adapted>152</adapted>
+<version>1.0</version>
+<pubdate>2019-02-02</pubdate>
+<modified>2019-02-02</modified>
+<price>0</price>
+<phpver>7.2</phpver>
+<advanced>
+  <dependency>IMAGE</dependency>
+  <rewritefunctions></rewritefunctions>
+  <existsfunctions></existsfunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
 </theme>

@@ -1,12 +1,22 @@
-{* Template Name:单条评论 *}
-<ul class="msg" id="cmt{$comment.ID}">
-	<li class="msgname"><img class="avatar" src="{$comment.Author.Avatar}" alt="" width="32"/>&nbsp;<span class="commentname"><a href="{$comment.Author.HomePage}" rel="nofollow" target="_blank">{$comment.Author.StaticName}</a></span><br/><small>&nbsp;{$lang['yt_blog']['comment_post_on']}&nbsp;{$comment.Time()}&nbsp;&nbsp;<span class="revertcomment"><a href="#comment" onclick="zbp.comment.reply('{$comment.ID}')">{$lang['yt_blog']['reply']}</a></span></small></li>
-	<li class="msgarticle">
-    {$comment.Content}
-	</li>
-</ul>
-{foreach $comment.Comments as $comment}
-   <ul class="children">
-        {template:comment}
-	</ul>
-{/foreach}	
+<li class="comment" id="comment-{$comment.ID}">
+	<div class="media">
+		<div class="media-left">
+        	<img alt='avatar' src='{$comment.Author.Avatar}' class='avatar avatar-48 photo' height='48' width='48' />
+		</div>
+   		<div class="media-body">
+   			<p class="author_name">{$comment.Author.Name}</p>
+			<p>{$comment.Content}</p>
+   		</div>
+   	</div>
+   	<div class="comment-metadata">
+   		<span class="comment-pub-time">{$comment.Time('Y-m-d H:i')}</span>
+   		<span class="comment-btn-reply">
+ 			<i class="fa fa-reply"></i> <a rel='nofollow' class='comment-reply-link' href='#respond' onclick="zbp.comment.reply('{$comment.ID}')">回复</a> 
+   		</span>
+   	</div>
+	<ol class="children">
+		{foreach $comment.Comments as $comment}
+			{template:comment}
+		{/foreach}
+	</ol>
+</li>
