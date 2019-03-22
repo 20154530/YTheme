@@ -1,5 +1,4 @@
 <?php
-
 //注册插件
 RegisterPlugin('yt_live2d', 'ActivePlugin_yt_live2d');
 

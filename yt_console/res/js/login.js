@@ -1,4 +1,6 @@
 var baseurl = "http://" + document.domain + "/zb_users/plugin/yt_console";
+if (document.domain == 'localhost')
+  baseurl = "http://" + document.domain + ":24680/zb_users/plugin/yt_console";
 $(function () {//DOM
   'use strict';
   $('dl dt').remove();
@@ -66,7 +68,12 @@ $(function () {//DOM
   +function () {//状态检查
     'use strict';
     $.ajax({
-      url: baseurl + '/query.php', dataType: "text", type: "GET", data: { data: 'loginbg' }, cache: false, async: true,
+      url: baseurl + '/query.php',
+      dataType: "text",
+      type: "GET",
+      data: { data: 'loginbg' },
+      cache: false,
+      async: true,
       success: function (txt) {
         let imginfo = txt.split(',');
         $('.bg').css('background-image', 'url(' + imginfo[0] + ')');

@@ -1,27 +1,30 @@
 {* Template Name: mainpage *}
 {template:header}
-<div class="articleList container">
-	<div class="row">
-		<div class="col-md-12">
-			{foreach $articles as $article}
-				{if $article.IsTop}
-					{template:post-istop}
-				{else}
-					{template:post-multi}
-				{/if}
-			{/foreach}
-		</div>
-	</div>
+{php}
+$accessurl = $_GET['url'];
+{/php}
+{if $accessurl == 'img'}
+{template:post-img}
+{else}
+<div id="component-article-holder" class="flex-layout-row">
+  <div class="article-panel">
+    {foreach $articles as $article}
+    {if $article.IsTop}
+    {template:post-istop}
+    {else}
+    {template:post-multi}
+    {/if}
+    {/foreach}
+  </div>
 </div>
-<div class="container pageNav">
-	<div class="row">	
-		<div class="col-md-12">
-			<nav>
-				<ul class="pagination">
-					{template:pagebar}
-				</ul>
-			</nav>
-		</div>
-	</div>
+<div id="component-pagenavi" class="flex-layout-row">
+  <div class="pagenavi-holder">
+    <nav>
+      <ul class="pagination">
+        {template:pagebar}
+      </ul>
+    </nav>
+  </div>
 </div>
+{/if}
 {template:footer}

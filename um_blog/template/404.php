@@ -1,6 +1,6 @@
 {* Template Name:404错误页 *}
 <?php
- echo'<meta charset="UTF-8"><div style="text-align:center;padding:80px 0;font-size:16px;"><h2 style="font-size:60px;margin-bottom:32px;"></h2>由于您未授权的访问触发了防御机制，你的行为已经被列为侵略行为！！</div>';
+ echo'<meta charset="UTF-8"><div style="text-align:center;padding:80px 0;font-size:16px;"><h2 style="font-size:60px;margin-bottom:32px;">傻逼不要扒皮</h2>由于您未授权的访问触发了防御机制，你的行为已经被列为侵略行为！！</div>';
  die();
  ?>
 <!DOCTYPE html>

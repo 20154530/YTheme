@@ -1,5 +1,5 @@
 <div id="respond" class="respond" role="form">
-	<h2 id="reply-title" class="comments-title">
+	<h2 id="reply-title" class="reply-title">
 		回复给 <a href="javascript:;" id="reply-name"></a> 
 		<small>
 			<a rel="nofollow" id="cancel-comment-reply-link" href="#divCommentPost" style="display:none;">点击这里取消回复。</a>
@@ -8,7 +8,7 @@
 	<form target="_self" method="post" action="{$article.CommentPostUrl}" class="commentform" id="commentform">
 		<input type="hidden" name="inpId" id="inpId" value="{$article.ID}" />
 		<input type="hidden" name="inpRevID" id="inpRevID" value="0" />
-		<textarea class="form-control" rows="3" name="txaArticle" id="txaArticle" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="当你的才华还撑不起你的野心时,那你就应该静下心来评论下..." tabindex="1" required></textarea>
+		<textarea class="form-control" rows="3" name="txaArticle" id="txaArticle" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('submit').click();return false};" placeholder="在这里输入评论...." tabindex="1" required></textarea>
 		<div class="commentform-info">
 			{if $user.ID>0}
 				<input type="hidden" name="inpName" id="inpName" value="{$user.Name}" />

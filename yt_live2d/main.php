@@ -15,12 +15,10 @@ if (!$zbp->CheckPlugin('yt_live2d')) {
 $blogtitle = 'yt_live2d';
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
-
 ?>
 <div>
 
 </div>
-
 <?php
 require $blogpath . 'zb_system/admin/admin_footer.php';
 RunTime();

@@ -13,7 +13,7 @@ function ActivePlugin_yt_console()
 function yt_console_Login()
 {
   global $zbp, $lang;
-  echo '<link rel="stylesheet" type="text/css" href="' . $zbp->host . 'zb_users/plugin/yt_console/res/css/login-min.css"/>' . "\r\n";
+  echo '<link rel="stylesheet" type="text/css" href="' . $zbp->host . 'zb_users/plugin/yt_console/res/css/login.css"/>' . "\r\n";
   echo '<script src="' . $zbp->host . 'zb_users/plugin/yt_console/res/js/login.js"></script>' . "\r\n";
   $lang["msg"]["stay_signed_in"] = "记住我";
 }

@@ -290,7 +290,7 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
     return a && "function" == typeof Symbol && a.constructor === Symbol && a !== Symbol.prototype ? "symbol" : typeof a
 };
 window.live2d_settings = [];
-live2d_settings.modelAPI = "//live2d.y-theta.com/live2d_web_api/";
+live2d_settings.modelAPI = "//api.y-theta.com/live2d_web_api/";
 live2d_settings.tipsMessage = "waifu-tips.json";
 live2d_settings.hitokotoAPI = "lwl12.com";
 live2d_settings.modelId = 1;

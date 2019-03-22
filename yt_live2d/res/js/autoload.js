@@ -12,7 +12,7 @@ $(function () {//开启看板娘
   live2d_settings['modelId'] = 1;
   live2d_settings['modelTexturesId'] = 51;
   live2d_settings['waifuEdgeSide'] = "right:80";
-  live2d_settings['waifuSize'] = "320x304";
+  live2d_settings['waifuSize'] = "320x300";
   live2d_settings['waifuTipsSize'] = "240x80";
   live2d_settings['modelStorage'] = false;
   /* 在 initModel 前添加 */

@@ -1,4 +1,4 @@
-{* Template Name:404错误页 *}
+{* Template Name: 404Page *}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 

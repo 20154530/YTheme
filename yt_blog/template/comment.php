@@ -1,7 +1,8 @@
+{* Template Name: comment *}
 <li class="comment" id="comment-{$comment.ID}">
 	<div class="media">
 		<div class="media-left">
-        	<img alt='avatar' src='{$comment.Author.Avatar}' class='avatar avatar-48 photo' height='48' width='48' />
+      <img alt='avatar' src='{$comment.Author.Avatar}' class='avatar avatar-48 photo' height='48' width='48' />
 		</div>
    		<div class="media-body">
    			<p class="author_name">{$comment.Author.Name}</p>
